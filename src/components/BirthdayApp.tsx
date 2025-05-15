@@ -48,7 +48,7 @@ export const BirthdayApp: React.FC = () => {
         </AnimatePresence>
       </div>
       
-      <div className="absolute z-20 bottom-4 right-4">
+      <div className="absolute z-20 bottom-10 md:bottom-4 right-4">
         <MusicControl />
       </div>
     </div>
