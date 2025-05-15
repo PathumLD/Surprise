@@ -110,7 +110,7 @@ export const BirthdayMessage: React.FC = () => {
             transition={{ duration: 0.2, delay: 0.3 }}
           >
             <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
-              {[1, 2, 3].map((i) => (
+              {[1, 2].map((i) => (
                 <motion.div
                   key={i}
                   className="flex items-center justify-center w-20 h-20 rounded-lg md:w-24 md:h-24 bg-primary-400/30"
