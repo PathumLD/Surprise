@@ -14,7 +14,7 @@ export const BirthdayMessage: React.FC = () => {
       const timer = setTimeout(() => {
         setVisibleText((prevText) => prevText + messageText[currentIndex]);
         setCurrentIndex((prevIndex) => prevIndex + 1);
-      }, 50); // Changed from 10ms to 5ms for faster typing effect
+      }, 80); // Changed from 10ms to 5ms for faster typing effect
       return () => clearTimeout(timer);
     } else {
       setTypingComplete(true);
@@ -95,7 +95,7 @@ export const BirthdayMessage: React.FC = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.2, delay: 0.2 }}
       >
-        <div className="text-xl leading-relaxed text-white md:text-2xl font-poppins">
+        <div className="text-xl leading-relaxed text-justify text-white md:text-2xl font-poppins">
           {visibleText}
           {!typingComplete && (
             <span className="inline-block ml-1 animate-pulse">❤️</span>
