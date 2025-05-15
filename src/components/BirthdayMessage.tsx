@@ -14,7 +14,7 @@ export const BirthdayMessage: React.FC = () => {
       const timer = setTimeout(() => {
         setVisibleText((prevText) => prevText + messageText[currentIndex]);
         setCurrentIndex((prevIndex) => prevIndex + 1);
-      }, 5); // Changed from 10ms to 5ms for faster typing effect
+      }, 50); // Changed from 10ms to 5ms for faster typing effect
       return () => clearTimeout(timer);
     } else {
       setTypingComplete(true);
