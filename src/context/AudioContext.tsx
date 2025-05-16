@@ -28,7 +28,7 @@ export const AudioProvider: React.FC<AudioProviderProps> = ({ children }) => {
     // Create audio element
     const audio = new Audio(music);
     audio.loop = true;
-    audio.volume = 0.1;
+    audio.volume = 0.3;
     audio.muted = true; // Start muted
     audioRef.current = audio;
 
