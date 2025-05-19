@@ -85,7 +85,7 @@ export const BirthdayMessage: React.FC = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.5 }}
         >
-          Happy Birthday!
+          Happy Birthday චූQ!
         </motion.h1>
       </motion.div>
 
