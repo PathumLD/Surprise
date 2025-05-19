@@ -109,11 +109,16 @@ export const BirthdayMessage: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.2, delay: 0.3 }}
           >
-            <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
-              {[1, 2].map((i) => (
+            <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+              {Array.from({ length: 4 }).map((_, i) => (
                 <motion.div
                   key={i}
-                  className="flex items-center justify-center w-20 h-20 rounded-lg md:w-24 md:h-24 bg-primary-400/30"
+                  className={`flex items-center justify-center w-20 h-20 rounded-lg md:w-24 md:h-24 bg-primary-400/30 ${
+                    (i === 2 && window.innerWidth < 768) || // Hide 3rd heart on mobile
+                    (i === 3 && window.innerWidth < 1024) // Hide 4th heart on tablet and mobile
+                      ? 'hidden'
+                      : ''
+                  }`}
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.2 * i }}
